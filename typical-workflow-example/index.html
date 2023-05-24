@@ -8,27 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://docs.easybuild.io/api/easybuild/toolchains/mpi/mvapich2/">
+        <link rel="canonical" href="https://docs.easybuild.io/typical-workflow-example/">
       
       
-        <link rel="prev" href="../mpitrampoline/">
+        <link rel="prev" href="../using-easybuild/">
       
       
-        <link rel="next" href="../openmpi/">
+        <link rel="next" href="../backup-modules/">
       
-      <link rel="icon" href="../../../../../favicon.ico">
+      <link rel="icon" href="../favicon.ico">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>mvapich2 - EasyBuild - building software with ease</title>
+        <title>Typical workflow example - EasyBuild - building software with ease</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.85bb2934.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a6bdf11c.min.css">
       
       
 
@@ -44,13 +44,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../../../stylesheets/asciinema-player-2.6.1.css">
+      <link rel="stylesheet" href="../stylesheets/asciinema-player-2.6.1.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#easybuild.toolchains.mpi.mvapich2" class="md-skip">
+        <a href="#typical_workflow" class="md-skip">
           Skip to content
         </a>
       
@@ -107,9 +107,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+    <a href=".." title="EasyBuild - building software with ease" class="md-header__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
-  <img src="../../../../../img/easybuild_logo.png" alt="logo">
+  <img src="../img/easybuild_logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -125,7 +125,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              mvapich2
+              Typical workflow example
             
           </span>
         </div>
@@ -234,9 +234,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
+    <a href=".." title="EasyBuild - building software with ease" class="md-nav__button md-logo" aria-label="EasyBuild - building software with ease" data-md-component="logo">
       
-  <img src="../../../../../img/easybuild_logo.png" alt="logo">
+  <img src="../img/easybuild_logo.png" alt="logo">
 
     </a>
     EasyBuild - building software with ease
@@ -264,7 +264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         Home
       </a>
     </li>
@@ -306,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../what-is-easybuild/" class="md-nav__link">
+      <a href="../what-is-easybuild/" class="md-nav__link">
         What is EasyBuild?
       </a>
     </li>
@@ -320,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../terminology/" class="md-nav__link">
+      <a href="../terminology/" class="md-nav__link">
         Terminology
       </a>
     </li>
@@ -340,14 +340,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -356,7 +358,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Getting started with EasyBuild
@@ -369,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../installation/" class="md-nav__link">
+      <a href="../installation/" class="md-nav__link">
         Installation
       </a>
     </li>
@@ -383,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         Configuration
       </a>
     </li>
@@ -397,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../using-easybuild/" class="md-nav__link">
+      <a href="../using-easybuild/" class="md-nav__link">
         Basic usage
       </a>
     </li>
@@ -409,11 +411,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../../typical-workflow-example/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Typical workflow example
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Typical workflow example
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#searching-for-available-easyconfigs-files" class="md-nav__link">
+    Searching for available easyconfigs files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-an-overview-of-planned-installations" class="md-nav__link">
+    Getting an overview of planned installations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-software-stack" class="md-nav__link">
+    Installing a software stack
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -460,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../backup-modules/" class="md-nav__link">
+      <a href="../backup-modules/" class="md-nav__link">
         Backing up existing modules
       </a>
     </li>
@@ -474,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../common-toolchains/" class="md-nav__link">
+      <a href="../common-toolchains/" class="md-nav__link">
         Common toolchains
       </a>
     </li>
@@ -488,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../controlling-compiler-optimization-flags/" class="md-nav__link">
+      <a href="../controlling-compiler-optimization-flags/" class="md-nav__link">
         Controlling optimization flags
       </a>
     </li>
@@ -502,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../detecting-loaded-modules/" class="md-nav__link">
+      <a href="../detecting-loaded-modules/" class="md-nav__link">
         Detecting loaded modules
       </a>
     </li>
@@ -516,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../log-files/" class="md-nav__link">
+      <a href="../log-files/" class="md-nav__link">
         EasyBuild log files
       </a>
     </li>
@@ -530,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../extended-dry-run/" class="md-nav__link">
+      <a href="../extended-dry-run/" class="md-nav__link">
         Extended dry run
       </a>
     </li>
@@ -544,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../locks/" class="md-nav__link">
+      <a href="../locks/" class="md-nav__link">
         Locks
       </a>
     </li>
@@ -558,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../manipulating-dependencies/" class="md-nav__link">
+      <a href="../manipulating-dependencies/" class="md-nav__link">
         Manipulating dependencies
       </a>
     </li>
@@ -572,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../partial-installations/" class="md-nav__link">
+      <a href="../partial-installations/" class="md-nav__link">
         Partial installations
       </a>
     </li>
@@ -586,7 +643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../python-2-3-compatibility/" class="md-nav__link">
+      <a href="../python-2-3-compatibility/" class="md-nav__link">
         Compatibility with Python 2 + 3
       </a>
     </li>
@@ -600,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../progress-bars/" class="md-nav__link">
+      <a href="../progress-bars/" class="md-nav__link">
         Progress bars
       </a>
     </li>
@@ -614,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../easyconfigs-search-index/" class="md-nav__link">
+      <a href="../easyconfigs-search-index/" class="md-nav__link">
         Search index for easyconfigs
       </a>
     </li>
@@ -628,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../system-toolchain/" class="md-nav__link">
+      <a href="../system-toolchain/" class="md-nav__link">
         System toolchain
       </a>
     </li>
@@ -642,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../submitting-jobs/" class="md-nav__link">
+      <a href="../submitting-jobs/" class="md-nav__link">
         Submitting installations as jobs
       </a>
     </li>
@@ -656,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../tracing-progress/" class="md-nav__link">
+      <a href="../tracing-progress/" class="md-nav__link">
         Tracing installation progress
       </a>
     </li>
@@ -670,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing-easyconfig-files/" class="md-nav__link">
+      <a href="../writing-easyconfig-files/" class="md-nav__link">
         Writing easyconfig files
       </a>
     </li>
@@ -719,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../cray-support/" class="md-nav__link">
+      <a href="../cray-support/" class="md-nav__link">
         Cray support
       </a>
     </li>
@@ -733,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../hooks/" class="md-nav__link">
+      <a href="../hooks/" class="md-nav__link">
         Customizing EasyBuild via hooks
       </a>
     </li>
@@ -747,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../including-additional-python-modules/" class="md-nav__link">
+      <a href="../including-additional-python-modules/" class="md-nav__link">
         Including Python modules
       </a>
     </li>
@@ -761,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../packaging-support/" class="md-nav__link">
+      <a href="../packaging-support/" class="md-nav__link">
         Packaging support
       </a>
     </li>
@@ -775,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../rpath-support/" class="md-nav__link">
+      <a href="../rpath-support/" class="md-nav__link">
         RPATH support
       </a>
     </li>
@@ -789,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../using-external-modules/" class="md-nav__link">
+      <a href="../using-external-modules/" class="md-nav__link">
         Using external modules
       </a>
     </li>
@@ -803,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../wrapping-dependencies/" class="md-nav__link">
+      <a href="../wrapping-dependencies/" class="md-nav__link">
         Wrapping dependencies
       </a>
     </li>
@@ -852,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../archived-easyconfigs/" class="md-nav__link">
+      <a href="../archived-easyconfigs/" class="md-nav__link">
         Archived easyconfigs
       </a>
     </li>
@@ -866,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../code-style/" class="md-nav__link">
+      <a href="../code-style/" class="md-nav__link">
         Code style
       </a>
     </li>
@@ -880,7 +937,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../contributing/" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         Contributing to EasyBuild
       </a>
     </li>
@@ -894,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../integration-with-github/" class="md-nav__link">
+      <a href="../integration-with-github/" class="md-nav__link">
         GitHub integration
       </a>
     </li>
@@ -908,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../implementing-easyblocks/" class="md-nav__link">
+      <a href="../implementing-easyblocks/" class="md-nav__link">
         Implementing easyblocks
       </a>
     </li>
@@ -922,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../easyconfig-files-local-variables/" class="md-nav__link">
+      <a href="../easyconfig-files-local-variables/" class="md-nav__link">
         Local variables in easyconfigs
       </a>
     </li>
@@ -936,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../unit-tests/" class="md-nav__link">
+      <a href="../unit-tests/" class="md-nav__link">
         Unit tests
       </a>
     </li>
@@ -950,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../framework-overview/" class="md-nav__link">
+      <a href="../framework-overview/" class="md-nav__link">
         Framework Overview
       </a>
     </li>
@@ -999,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../experimental-features/" class="md-nav__link">
+      <a href="../experimental-features/" class="md-nav__link">
         (overview)
       </a>
     </li>
@@ -1013,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../containers/" class="md-nav__link">
+      <a href="../containers/" class="md-nav__link">
         Creating container images/recipes
       </a>
     </li>
@@ -1027,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../easystack-files/" class="md-nav__link">
+      <a href="../easystack-files/" class="md-nav__link">
         Easystack files
       </a>
     </li>
@@ -1041,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../writing-yeb-easyconfig-files/" class="md-nav__link">
+      <a href="../writing-yeb-easyconfig-files/" class="md-nav__link">
         Easyconfig files in YAML syntax
       </a>
     </li>
@@ -1055,7 +1112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../installing-extensions-in-parallel/" class="md-nav__link">
+      <a href="../installing-extensions-in-parallel/" class="md-nav__link">
         Installing extensions in parallel
       </a>
     </li>
@@ -1104,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/" class="md-nav__link">
+      <a href="../version-specific/" class="md-nav__link">
         (overview)
       </a>
     </li>
@@ -1118,7 +1175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/config-file-constants/" class="md-nav__link">
+      <a href="../version-specific/config-file-constants/" class="md-nav__link">
         Constants for config files
       </a>
     </li>
@@ -1132,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/easyconfig-constants/" class="md-nav__link">
+      <a href="../version-specific/easyconfig-constants/" class="md-nav__link">
         Constants for easyconfigs
       </a>
     </li>
@@ -1146,7 +1203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/easyblocks/" class="md-nav__link">
+      <a href="../version-specific/easyblocks/" class="md-nav__link">
         Easyblocks
       </a>
     </li>
@@ -1160,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/eb-help/" class="md-nav__link">
+      <a href="../version-specific/eb-help/" class="md-nav__link">
         EasyBuild configuration options
       </a>
     </li>
@@ -1174,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/easyconfig-parameters/" class="md-nav__link">
+      <a href="../version-specific/easyconfig-parameters/" class="md-nav__link">
         Easyconfig parameters
       </a>
     </li>
@@ -1188,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/eb-a-wrf/" class="md-nav__link">
+      <a href="../version-specific/eb-a-wrf/" class="md-nav__link">
         Easyconfig parameters for WRF
       </a>
     </li>
@@ -1202,7 +1259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/generic-easyblocks/" class="md-nav__link">
+      <a href="../version-specific/generic-easyblocks/" class="md-nav__link">
         Generic easyblocks
       </a>
     </li>
@@ -1216,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/easyconfig-license-constants/" class="md-nav__link">
+      <a href="../version-specific/easyconfig-license-constants/" class="md-nav__link">
         License constants for easyconfigs
       </a>
     </li>
@@ -1230,7 +1287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/easyconfig-templates/" class="md-nav__link">
+      <a href="../version-specific/easyconfig-templates/" class="md-nav__link">
         Templates for easyconfigs
       </a>
     </li>
@@ -1244,7 +1301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/toolchain-opts/" class="md-nav__link">
+      <a href="../version-specific/toolchain-opts/" class="md-nav__link">
         Toolchain options
       </a>
     </li>
@@ -1258,7 +1315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/toolchains/" class="md-nav__link">
+      <a href="../version-specific/toolchains/" class="md-nav__link">
         Toolchains
       </a>
     </li>
@@ -1280,7 +1337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../release-notes/" class="md-nav__link">
+      <a href="../release-notes/" class="md-nav__link">
         EasyBuild release notes
       </a>
     </li>
@@ -1295,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../maintainers/" class="md-nav__link">
+      <a href="../maintainers/" class="md-nav__link">
         EasyBuild maintainers
       </a>
     </li>
@@ -1308,16 +1365,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
       
       
       
@@ -1326,7 +1381,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           API
@@ -1337,23 +1392,21 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" >
       
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../">easybuild</a>
+          <a href="../api/easybuild/">easybuild</a>
           
             <label for="__nav_11_1">
               <span class="md-nav__icon md-icon"></span>
@@ -1361,7 +1414,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11_1">
           <span class="md-nav__icon md-icon"></span>
           easybuild
@@ -1386,7 +1439,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../base/">base</a>
+          <a href="../api/easybuild/base/">base</a>
           
             <label for="__nav_11_1_1">
               <span class="md-nav__icon md-icon"></span>
@@ -1407,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base/exceptions/" class="md-nav__link">
+      <a href="../api/easybuild/base/exceptions/" class="md-nav__link">
         exceptions
       </a>
     </li>
@@ -1421,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base/fancylogger/" class="md-nav__link">
+      <a href="../api/easybuild/base/fancylogger/" class="md-nav__link">
         fancylogger
       </a>
     </li>
@@ -1435,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base/frozendict/" class="md-nav__link">
+      <a href="../api/easybuild/base/frozendict/" class="md-nav__link">
         frozendict
       </a>
     </li>
@@ -1449,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base/generaloption/" class="md-nav__link">
+      <a href="../api/easybuild/base/generaloption/" class="md-nav__link">
         generaloption
       </a>
     </li>
@@ -1463,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base/optcomplete/" class="md-nav__link">
+      <a href="../api/easybuild/base/optcomplete/" class="md-nav__link">
         optcomplete
       </a>
     </li>
@@ -1477,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base/rest/" class="md-nav__link">
+      <a href="../api/easybuild/base/rest/" class="md-nav__link">
         rest
       </a>
     </li>
@@ -1491,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base/testing/" class="md-nav__link">
+      <a href="../api/easybuild/base/testing/" class="md-nav__link">
         testing
       </a>
     </li>
@@ -1505,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base/wrapper/" class="md-nav__link">
+      <a href="../api/easybuild/base/wrapper/" class="md-nav__link">
         wrapper
       </a>
     </li>
@@ -1538,7 +1591,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../framework/">framework</a>
+          <a href="../api/easybuild/framework/">framework</a>
           
             <label for="__nav_11_1_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1559,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyblock/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyblock/" class="md-nav__link">
         easyblock
       </a>
     </li>
@@ -1585,7 +1638,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../framework/easyconfig/">easyconfig</a>
+          <a href="../api/easybuild/framework/easyconfig/">easyconfig</a>
           
             <label for="__nav_11_1_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1606,7 +1659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/constants/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/constants/" class="md-nav__link">
         constants
       </a>
     </li>
@@ -1620,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/default/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/default/" class="md-nav__link">
         default
       </a>
     </li>
@@ -1634,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/easyconfig/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/easyconfig/" class="md-nav__link">
         easyconfig
       </a>
     </li>
@@ -1660,7 +1713,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../framework/easyconfig/format/">format</a>
+          <a href="../api/easybuild/framework/easyconfig/format/">format</a>
           
             <label for="__nav_11_1_2_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1681,7 +1734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/format/convert/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/format/convert/" class="md-nav__link">
         convert
       </a>
     </li>
@@ -1695,7 +1748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/format/format/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/format/format/" class="md-nav__link">
         format
       </a>
     </li>
@@ -1709,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/format/one/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/format/one/" class="md-nav__link">
         one
       </a>
     </li>
@@ -1723,7 +1776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/format/pyheaderconfigobj/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/format/pyheaderconfigobj/" class="md-nav__link">
         pyheaderconfigobj
       </a>
     </li>
@@ -1737,7 +1790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/format/two/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/format/two/" class="md-nav__link">
         two
       </a>
     </li>
@@ -1751,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/format/version/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/format/version/" class="md-nav__link">
         version
       </a>
     </li>
@@ -1765,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/format/yeb/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/format/yeb/" class="md-nav__link">
         yeb
       </a>
     </li>
@@ -1786,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/licenses/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/licenses/" class="md-nav__link">
         licenses
       </a>
     </li>
@@ -1800,7 +1853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/parser/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/parser/" class="md-nav__link">
         parser
       </a>
     </li>
@@ -1814,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/style/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/style/" class="md-nav__link">
         style
       </a>
     </li>
@@ -1828,7 +1881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/templates/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/templates/" class="md-nav__link">
         templates
       </a>
     </li>
@@ -1842,7 +1895,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/tools/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/tools/" class="md-nav__link">
         tools
       </a>
     </li>
@@ -1856,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/tweak/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/tweak/" class="md-nav__link">
         tweak
       </a>
     </li>
@@ -1870,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easyconfig/types/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easyconfig/types/" class="md-nav__link">
         types
       </a>
     </li>
@@ -1891,7 +1944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/easystack/" class="md-nav__link">
+      <a href="../api/easybuild/framework/easystack/" class="md-nav__link">
         easystack
       </a>
     </li>
@@ -1905,7 +1958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/extension/" class="md-nav__link">
+      <a href="../api/easybuild/framework/extension/" class="md-nav__link">
         extension
       </a>
     </li>
@@ -1919,7 +1972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../framework/extensioneasyblock/" class="md-nav__link">
+      <a href="../api/easybuild/framework/extensioneasyblock/" class="md-nav__link">
         extensioneasyblock
       </a>
     </li>
@@ -1940,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../main/" class="md-nav__link">
+      <a href="../api/easybuild/main/" class="md-nav__link">
         main
       </a>
     </li>
@@ -1981,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../scripts/bootstrap_eb/" class="md-nav__link">
+      <a href="../api/easybuild/scripts/bootstrap_eb/" class="md-nav__link">
         bootstrap_eb
       </a>
     </li>
@@ -1995,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../scripts/clean_gists/" class="md-nav__link">
+      <a href="../api/easybuild/scripts/clean_gists/" class="md-nav__link">
         clean_gists
       </a>
     </li>
@@ -2009,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../scripts/findPythonDeps/" class="md-nav__link">
+      <a href="../api/easybuild/scripts/findPythonDeps/" class="md-nav__link">
         findPythonDeps
       </a>
     </li>
@@ -2023,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../scripts/fix_docs/" class="md-nav__link">
+      <a href="../api/easybuild/scripts/fix_docs/" class="md-nav__link">
         fix_docs
       </a>
     </li>
@@ -2037,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../scripts/mk_tmpl_easyblock_for/" class="md-nav__link">
+      <a href="../api/easybuild/scripts/mk_tmpl_easyblock_for/" class="md-nav__link">
         mk_tmpl_easyblock_for
       </a>
     </li>
@@ -2051,7 +2104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../scripts/rpath_args/" class="md-nav__link">
+      <a href="../api/easybuild/scripts/rpath_args/" class="md-nav__link">
         rpath_args
       </a>
     </li>
@@ -2070,23 +2123,21 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5" >
       
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">toolchains</a>
+          <a href="../api/easybuild/toolchains/">toolchains</a>
           
             <label for="__nav_11_1_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2094,7 +2145,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_1_5_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_11_1_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11_1_5">
           <span class="md-nav__icon md-icon"></span>
           toolchains
@@ -2107,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cgmpich/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/cgmpich/" class="md-nav__link">
         cgmpich
       </a>
     </li>
@@ -2121,7 +2172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cgmpolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/cgmpolf/" class="md-nav__link">
         cgmpolf
       </a>
     </li>
@@ -2135,7 +2186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cgmvapich2/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/cgmvapich2/" class="md-nav__link">
         cgmvapich2
       </a>
     </li>
@@ -2149,7 +2200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cgmvolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/cgmvolf/" class="md-nav__link">
         cgmvolf
       </a>
     </li>
@@ -2163,7 +2214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cgompi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/cgompi/" class="md-nav__link">
         cgompi
       </a>
     </li>
@@ -2177,7 +2228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cgoolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/cgoolf/" class="md-nav__link">
         cgoolf
       </a>
     </li>
@@ -2191,7 +2242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../clanggcc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/clanggcc/" class="md-nav__link">
         clanggcc
       </a>
     </li>
@@ -2217,7 +2268,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../compiler/">compiler</a>
+          <a href="../api/easybuild/toolchains/compiler/">compiler</a>
           
             <label for="__nav_11_1_5_8">
               <span class="md-nav__icon md-icon"></span>
@@ -2238,7 +2289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/clang/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/clang/" class="md-nav__link">
         clang
       </a>
     </li>
@@ -2252,7 +2303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/craype/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/craype/" class="md-nav__link">
         craype
       </a>
     </li>
@@ -2266,7 +2317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/cuda/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/cuda/" class="md-nav__link">
         cuda
       </a>
     </li>
@@ -2280,7 +2331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/dummycompiler/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/dummycompiler/" class="md-nav__link">
         dummycompiler
       </a>
     </li>
@@ -2294,7 +2345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/fujitsu/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/fujitsu/" class="md-nav__link">
         fujitsu
       </a>
     </li>
@@ -2308,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/gcc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/gcc/" class="md-nav__link">
         gcc
       </a>
     </li>
@@ -2322,7 +2373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/ibmxl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/ibmxl/" class="md-nav__link">
         ibmxl
       </a>
     </li>
@@ -2336,7 +2387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/intel_compilers/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/intel_compilers/" class="md-nav__link">
         intel_compilers
       </a>
     </li>
@@ -2350,7 +2401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/inteliccifort/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/inteliccifort/" class="md-nav__link">
         inteliccifort
       </a>
     </li>
@@ -2364,7 +2415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/nvhpc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/nvhpc/" class="md-nav__link">
         nvhpc
       </a>
     </li>
@@ -2378,7 +2429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/pgi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/pgi/" class="md-nav__link">
         pgi
       </a>
     </li>
@@ -2392,7 +2443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../compiler/systemcompiler/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/compiler/systemcompiler/" class="md-nav__link">
         systemcompiler
       </a>
     </li>
@@ -2413,7 +2464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craycce/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/craycce/" class="md-nav__link">
         craycce
       </a>
     </li>
@@ -2427,7 +2478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craygnu/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/craygnu/" class="md-nav__link">
         craygnu
       </a>
     </li>
@@ -2441,7 +2492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../crayintel/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/crayintel/" class="md-nav__link">
         crayintel
       </a>
     </li>
@@ -2455,7 +2506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../craypgi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/craypgi/" class="md-nav__link">
         craypgi
       </a>
     </li>
@@ -2469,7 +2520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dummy/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/dummy/" class="md-nav__link">
         dummy
       </a>
     </li>
@@ -2483,7 +2534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fcc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/fcc/" class="md-nav__link">
         fcc
       </a>
     </li>
@@ -2497,7 +2548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ffmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/ffmpi/" class="md-nav__link">
         ffmpi
       </a>
     </li>
@@ -2523,7 +2574,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../fft/">fft</a>
+          <a href="../api/easybuild/toolchains/fft/">fft</a>
           
             <label for="__nav_11_1_5_16">
               <span class="md-nav__icon md-icon"></span>
@@ -2544,7 +2595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fft/fftw/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/fft/fftw/" class="md-nav__link">
         fftw
       </a>
     </li>
@@ -2558,7 +2609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fft/fujitsufftw/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/fft/fujitsufftw/" class="md-nav__link">
         fujitsufftw
       </a>
     </li>
@@ -2572,7 +2623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fft/intelfftw/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/fft/intelfftw/" class="md-nav__link">
         intelfftw
       </a>
     </li>
@@ -2593,7 +2644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../foss/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/foss/" class="md-nav__link">
         foss
       </a>
     </li>
@@ -2607,7 +2658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fosscuda/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/fosscuda/" class="md-nav__link">
         fosscuda
       </a>
     </li>
@@ -2621,7 +2672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../fujitsu/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/fujitsu/" class="md-nav__link">
         fujitsu
       </a>
     </li>
@@ -2635,7 +2686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gcc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gcc/" class="md-nav__link">
         gcc
       </a>
     </li>
@@ -2649,7 +2700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gcccore/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gcccore/" class="md-nav__link">
         gcccore
       </a>
     </li>
@@ -2663,7 +2714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gcccuda/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gcccuda/" class="md-nav__link">
         gcccuda
       </a>
     </li>
@@ -2677,7 +2728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gfbf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gfbf/" class="md-nav__link">
         gfbf
       </a>
     </li>
@@ -2691,7 +2742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gimkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gimkl/" class="md-nav__link">
         gimkl
       </a>
     </li>
@@ -2705,7 +2756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gimpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gimpi/" class="md-nav__link">
         gimpi
       </a>
     </li>
@@ -2719,7 +2770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gimpic/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gimpic/" class="md-nav__link">
         gimpic
       </a>
     </li>
@@ -2733,7 +2784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../giolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/giolf/" class="md-nav__link">
         giolf
       </a>
     </li>
@@ -2747,7 +2798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../giolfc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/giolfc/" class="md-nav__link">
         giolfc
       </a>
     </li>
@@ -2761,7 +2812,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmacml/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmacml/" class="md-nav__link">
         gmacml
       </a>
     </li>
@@ -2775,7 +2826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmkl/" class="md-nav__link">
         gmkl
       </a>
     </li>
@@ -2789,7 +2840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmklc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmklc/" class="md-nav__link">
         gmklc
       </a>
     </li>
@@ -2803,7 +2854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmpich/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmpich/" class="md-nav__link">
         gmpich
       </a>
     </li>
@@ -2817,7 +2868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmpich2/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmpich2/" class="md-nav__link">
         gmpich2
       </a>
     </li>
@@ -2831,7 +2882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmpit/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmpit/" class="md-nav__link">
         gmpit
       </a>
     </li>
@@ -2845,7 +2896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmpolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmpolf/" class="md-nav__link">
         gmpolf
       </a>
     </li>
@@ -2859,7 +2910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmvapich2/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmvapich2/" class="md-nav__link">
         gmvapich2
       </a>
     </li>
@@ -2873,7 +2924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gmvolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gmvolf/" class="md-nav__link">
         gmvolf
       </a>
     </li>
@@ -2887,7 +2938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gnu/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gnu/" class="md-nav__link">
         gnu
       </a>
     </li>
@@ -2901,7 +2952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../goalf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/goalf/" class="md-nav__link">
         goalf
       </a>
     </li>
@@ -2915,7 +2966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gobff/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gobff/" class="md-nav__link">
         gobff
       </a>
     </li>
@@ -2929,7 +2980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../goblf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/goblf/" class="md-nav__link">
         goblf
       </a>
     </li>
@@ -2943,7 +2994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gofbf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gofbf/" class="md-nav__link">
         gofbf
       </a>
     </li>
@@ -2957,7 +3008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/golf/" class="md-nav__link">
         golf
       </a>
     </li>
@@ -2971,7 +3022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../golfc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/golfc/" class="md-nav__link">
         golfc
       </a>
     </li>
@@ -2985,7 +3036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gomkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gomkl/" class="md-nav__link">
         gomkl
       </a>
     </li>
@@ -2999,7 +3050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gomklc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gomklc/" class="md-nav__link">
         gomklc
       </a>
     </li>
@@ -3013,7 +3064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gompi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gompi/" class="md-nav__link">
         gompi
       </a>
     </li>
@@ -3027,7 +3078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gompic/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gompic/" class="md-nav__link">
         gompic
       </a>
     </li>
@@ -3041,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../goolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/goolf/" class="md-nav__link">
         goolf
       </a>
     </li>
@@ -3055,7 +3106,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../goolfc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/goolfc/" class="md-nav__link">
         goolfc
       </a>
     </li>
@@ -3069,7 +3120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gpsmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gpsmpi/" class="md-nav__link">
         gpsmpi
       </a>
     </li>
@@ -3083,7 +3134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gpsolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gpsolf/" class="md-nav__link">
         gpsolf
       </a>
     </li>
@@ -3097,7 +3148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gqacml/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gqacml/" class="md-nav__link">
         gqacml
       </a>
     </li>
@@ -3111,7 +3162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gsmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gsmpi/" class="md-nav__link">
         gsmpi
       </a>
     </li>
@@ -3125,7 +3176,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gsolf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/gsolf/" class="md-nav__link">
         gsolf
       </a>
     </li>
@@ -3139,7 +3190,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iccifort/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iccifort/" class="md-nav__link">
         iccifort
       </a>
     </li>
@@ -3153,7 +3204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iccifortcuda/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iccifortcuda/" class="md-nav__link">
         iccifortcuda
       </a>
     </li>
@@ -3167,7 +3218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ictce/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/ictce/" class="md-nav__link">
         ictce
       </a>
     </li>
@@ -3181,7 +3232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iibff/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iibff/" class="md-nav__link">
         iibff
       </a>
     </li>
@@ -3195,7 +3246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iimkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iimkl/" class="md-nav__link">
         iimkl
       </a>
     </li>
@@ -3209,7 +3260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iimklc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iimklc/" class="md-nav__link">
         iimklc
       </a>
     </li>
@@ -3223,7 +3274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iimpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iimpi/" class="md-nav__link">
         iimpi
       </a>
     </li>
@@ -3237,7 +3288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iimpic/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iimpic/" class="md-nav__link">
         iimpic
       </a>
     </li>
@@ -3251,7 +3302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iiqmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iiqmpi/" class="md-nav__link">
         iiqmpi
       </a>
     </li>
@@ -3265,7 +3316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../impich/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/impich/" class="md-nav__link">
         impich
       </a>
     </li>
@@ -3279,7 +3330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../impmkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/impmkl/" class="md-nav__link">
         impmkl
       </a>
     </li>
@@ -3293,7 +3344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intel-para/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/intel-para/" class="md-nav__link">
         intel-para
       </a>
     </li>
@@ -3307,7 +3358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intel/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/intel/" class="md-nav__link">
         intel
       </a>
     </li>
@@ -3321,7 +3372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intel_compilers/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/intel_compilers/" class="md-nav__link">
         intel_compilers
       </a>
     </li>
@@ -3335,7 +3386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../intelcuda/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/intelcuda/" class="md-nav__link">
         intelcuda
       </a>
     </li>
@@ -3349,7 +3400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iomkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iomkl/" class="md-nav__link">
         iomkl
       </a>
     </li>
@@ -3363,7 +3414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iomklc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iomklc/" class="md-nav__link">
         iomklc
       </a>
     </li>
@@ -3377,7 +3428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iompi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iompi/" class="md-nav__link">
         iompi
       </a>
     </li>
@@ -3391,7 +3442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iompic/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iompic/" class="md-nav__link">
         iompic
       </a>
     </li>
@@ -3405,7 +3456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ipsmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/ipsmpi/" class="md-nav__link">
         ipsmpi
       </a>
     </li>
@@ -3419,7 +3470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iqacml/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/iqacml/" class="md-nav__link">
         iqacml
       </a>
     </li>
@@ -3433,7 +3484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ismkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/ismkl/" class="md-nav__link">
         ismkl
       </a>
     </li>
@@ -3459,7 +3510,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../linalg/">linalg</a>
+          <a href="../api/easybuild/toolchains/linalg/">linalg</a>
           
             <label for="__nav_11_1_5_78">
               <span class="md-nav__icon md-icon"></span>
@@ -3480,7 +3531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/acml/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/acml/" class="md-nav__link">
         acml
       </a>
     </li>
@@ -3494,7 +3545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/atlas/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/atlas/" class="md-nav__link">
         atlas
       </a>
     </li>
@@ -3508,7 +3559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/blacs/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/blacs/" class="md-nav__link">
         blacs
       </a>
     </li>
@@ -3522,7 +3573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/blis/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/blis/" class="md-nav__link">
         blis
       </a>
     </li>
@@ -3536,7 +3587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/flame/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/flame/" class="md-nav__link">
         flame
       </a>
     </li>
@@ -3550,7 +3601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/flexiblas/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/flexiblas/" class="md-nav__link">
         flexiblas
       </a>
     </li>
@@ -3564,7 +3615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/fujitsussl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/fujitsussl/" class="md-nav__link">
         fujitsussl
       </a>
     </li>
@@ -3578,7 +3629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/gotoblas/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/gotoblas/" class="md-nav__link">
         gotoblas
       </a>
     </li>
@@ -3592,7 +3643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/intelmkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/intelmkl/" class="md-nav__link">
         intelmkl
       </a>
     </li>
@@ -3606,7 +3657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/lapack/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/lapack/" class="md-nav__link">
         lapack
       </a>
     </li>
@@ -3620,7 +3671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/libsci/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/libsci/" class="md-nav__link">
         libsci
       </a>
     </li>
@@ -3634,7 +3685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/openblas/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/openblas/" class="md-nav__link">
         openblas
       </a>
     </li>
@@ -3648,7 +3699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linalg/scalapack/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/linalg/scalapack/" class="md-nav__link">
         scalapack
       </a>
     </li>
@@ -3667,23 +3718,21 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_79" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1_5_79" >
       
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">mpi</a>
+          <a href="../api/easybuild/toolchains/mpi/">mpi</a>
           
             <label for="__nav_11_1_5_79">
               <span class="md-nav__icon md-icon"></span>
@@ -3691,7 +3740,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_79_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_11_1_5_79_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11_1_5_79">
           <span class="md-nav__icon md-icon"></span>
           mpi
@@ -3704,7 +3753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../craympich/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/craympich/" class="md-nav__link">
         craympich
       </a>
     </li>
@@ -3718,7 +3767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fujitsumpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/fujitsumpi/" class="md-nav__link">
         fujitsumpi
       </a>
     </li>
@@ -3732,7 +3781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intelmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/intelmpi/" class="md-nav__link">
         intelmpi
       </a>
     </li>
@@ -3746,7 +3795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mpich/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/mpich/" class="md-nav__link">
         mpich
       </a>
     </li>
@@ -3760,7 +3809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mpich2/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/mpich2/" class="md-nav__link">
         mpich2
       </a>
     </li>
@@ -3774,7 +3823,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mpitrampoline/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/mpitrampoline/" class="md-nav__link">
         mpitrampoline
       </a>
     </li>
@@ -3786,55 +3835,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          mvapich2
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../api/easybuild/toolchains/mpi/mvapich2/" class="md-nav__link">
         mvapich2
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#easybuild.toolchains.mpi.mvapich2" class="md-nav__link">
-    easybuild.toolchains.mpi.mvapich2
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#easybuild.toolchains.mpi.mvapich2.Mvapich2" class="md-nav__link">
-    Mvapich2
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3846,7 +3851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/openmpi/" class="md-nav__link">
         openmpi
       </a>
     </li>
@@ -3860,7 +3865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../psmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/psmpi/" class="md-nav__link">
         psmpi
       </a>
     </li>
@@ -3874,7 +3879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../qlogicmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/qlogicmpi/" class="md-nav__link">
         qlogicmpi
       </a>
     </li>
@@ -3888,7 +3893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../spectrummpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/mpi/spectrummpi/" class="md-nav__link">
         spectrummpi
       </a>
     </li>
@@ -3909,7 +3914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nvhpc/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/nvhpc/" class="md-nav__link">
         nvhpc
       </a>
     </li>
@@ -3923,7 +3928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nvofbf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/nvofbf/" class="md-nav__link">
         nvofbf
       </a>
     </li>
@@ -3937,7 +3942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nvompi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/nvompi/" class="md-nav__link">
         nvompi
       </a>
     </li>
@@ -3951,7 +3956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nvompic/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/nvompic/" class="md-nav__link">
         nvompic
       </a>
     </li>
@@ -3965,7 +3970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nvpsmpi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/nvpsmpi/" class="md-nav__link">
         nvpsmpi
       </a>
     </li>
@@ -3979,7 +3984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nvpsmpic/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/nvpsmpic/" class="md-nav__link">
         nvpsmpic
       </a>
     </li>
@@ -3993,7 +3998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pgi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/pgi/" class="md-nav__link">
         pgi
       </a>
     </li>
@@ -4007,7 +4012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pmkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/pmkl/" class="md-nav__link">
         pmkl
       </a>
     </li>
@@ -4021,7 +4026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pomkl/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/pomkl/" class="md-nav__link">
         pomkl
       </a>
     </li>
@@ -4035,7 +4040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pompi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/pompi/" class="md-nav__link">
         pompi
       </a>
     </li>
@@ -4049,7 +4054,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../system/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/system/" class="md-nav__link">
         system
       </a>
     </li>
@@ -4063,7 +4068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xlcxlf/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/xlcxlf/" class="md-nav__link">
         xlcxlf
       </a>
     </li>
@@ -4077,7 +4082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xlmpich/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/xlmpich/" class="md-nav__link">
         xlmpich
       </a>
     </li>
@@ -4091,7 +4096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xlmpich2/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/xlmpich2/" class="md-nav__link">
         xlmpich2
       </a>
     </li>
@@ -4105,7 +4110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xlmvapich2/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/xlmvapich2/" class="md-nav__link">
         xlmvapich2
       </a>
     </li>
@@ -4119,7 +4124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../xlompi/" class="md-nav__link">
+      <a href="../api/easybuild/toolchains/xlompi/" class="md-nav__link">
         xlompi
       </a>
     </li>
@@ -4152,7 +4157,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/">tools</a>
+          <a href="../api/easybuild/tools/">tools</a>
           
             <label for="__nav_11_1_6">
               <span class="md-nav__icon md-icon"></span>
@@ -4173,7 +4178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/asyncprocess/" class="md-nav__link">
+      <a href="../api/easybuild/tools/asyncprocess/" class="md-nav__link">
         asyncprocess
       </a>
     </li>
@@ -4187,7 +4192,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/build_details/" class="md-nav__link">
+      <a href="../api/easybuild/tools/build_details/" class="md-nav__link">
         build_details
       </a>
     </li>
@@ -4201,7 +4206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/build_log/" class="md-nav__link">
+      <a href="../api/easybuild/tools/build_log/" class="md-nav__link">
         build_log
       </a>
     </li>
@@ -4215,7 +4220,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/config/" class="md-nav__link">
+      <a href="../api/easybuild/tools/config/" class="md-nav__link">
         config
       </a>
     </li>
@@ -4229,7 +4234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/configobj/" class="md-nav__link">
+      <a href="../api/easybuild/tools/configobj/" class="md-nav__link">
         configobj
       </a>
     </li>
@@ -4255,7 +4260,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/containers/">containers</a>
+          <a href="../api/easybuild/tools/containers/">containers</a>
           
             <label for="__nav_11_1_6_6">
               <span class="md-nav__icon md-icon"></span>
@@ -4276,7 +4281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/containers/base/" class="md-nav__link">
+      <a href="../api/easybuild/tools/containers/base/" class="md-nav__link">
         base
       </a>
     </li>
@@ -4290,7 +4295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/containers/common/" class="md-nav__link">
+      <a href="../api/easybuild/tools/containers/common/" class="md-nav__link">
         common
       </a>
     </li>
@@ -4304,7 +4309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/containers/docker/" class="md-nav__link">
+      <a href="../api/easybuild/tools/containers/docker/" class="md-nav__link">
         docker
       </a>
     </li>
@@ -4318,7 +4323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/containers/singularity/" class="md-nav__link">
+      <a href="../api/easybuild/tools/containers/singularity/" class="md-nav__link">
         singularity
       </a>
     </li>
@@ -4332,7 +4337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/containers/utils/" class="md-nav__link">
+      <a href="../api/easybuild/tools/containers/utils/" class="md-nav__link">
         utils
       </a>
     </li>
@@ -4353,7 +4358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/convert/" class="md-nav__link">
+      <a href="../api/easybuild/tools/convert/" class="md-nav__link">
         convert
       </a>
     </li>
@@ -4367,7 +4372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/deprecated/" class="md-nav__link">
+      <a href="../api/easybuild/tools/deprecated/" class="md-nav__link">
         deprecated
       </a>
     </li>
@@ -4381,7 +4386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/docs/" class="md-nav__link">
+      <a href="../api/easybuild/tools/docs/" class="md-nav__link">
         docs
       </a>
     </li>
@@ -4395,7 +4400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/environment/" class="md-nav__link">
+      <a href="../api/easybuild/tools/environment/" class="md-nav__link">
         environment
       </a>
     </li>
@@ -4409,7 +4414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/filetools/" class="md-nav__link">
+      <a href="../api/easybuild/tools/filetools/" class="md-nav__link">
         filetools
       </a>
     </li>
@@ -4423,7 +4428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/github/" class="md-nav__link">
+      <a href="../api/easybuild/tools/github/" class="md-nav__link">
         github
       </a>
     </li>
@@ -4437,7 +4442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/hooks/" class="md-nav__link">
+      <a href="../api/easybuild/tools/hooks/" class="md-nav__link">
         hooks
       </a>
     </li>
@@ -4451,7 +4456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/include/" class="md-nav__link">
+      <a href="../api/easybuild/tools/include/" class="md-nav__link">
         include
       </a>
     </li>
@@ -4465,7 +4470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/jenkins/" class="md-nav__link">
+      <a href="../api/easybuild/tools/jenkins/" class="md-nav__link">
         jenkins
       </a>
     </li>
@@ -4491,7 +4496,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/job/">job</a>
+          <a href="../api/easybuild/tools/job/">job</a>
           
             <label for="__nav_11_1_6_16">
               <span class="md-nav__icon md-icon"></span>
@@ -4512,7 +4517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/job/backend/" class="md-nav__link">
+      <a href="../api/easybuild/tools/job/backend/" class="md-nav__link">
         backend
       </a>
     </li>
@@ -4526,7 +4531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/job/gc3pie/" class="md-nav__link">
+      <a href="../api/easybuild/tools/job/gc3pie/" class="md-nav__link">
         gc3pie
       </a>
     </li>
@@ -4540,7 +4545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/job/pbs_python/" class="md-nav__link">
+      <a href="../api/easybuild/tools/job/pbs_python/" class="md-nav__link">
         pbs_python
       </a>
     </li>
@@ -4554,7 +4559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/job/slurm/" class="md-nav__link">
+      <a href="../api/easybuild/tools/job/slurm/" class="md-nav__link">
         slurm
       </a>
     </li>
@@ -4575,7 +4580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/loose_version/" class="md-nav__link">
+      <a href="../api/easybuild/tools/loose_version/" class="md-nav__link">
         loose_version
       </a>
     </li>
@@ -4589,7 +4594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_generator/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_generator/" class="md-nav__link">
         module_generator
       </a>
     </li>
@@ -4615,7 +4620,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/module_naming_scheme/">module_naming_scheme</a>
+          <a href="../api/easybuild/tools/module_naming_scheme/">module_naming_scheme</a>
           
             <label for="__nav_11_1_6_19">
               <span class="md-nav__icon md-icon"></span>
@@ -4636,7 +4641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_naming_scheme/categorized_hmns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_naming_scheme/categorized_hmns/" class="md-nav__link">
         categorized_hmns
       </a>
     </li>
@@ -4650,7 +4655,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_naming_scheme/categorized_mns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_naming_scheme/categorized_mns/" class="md-nav__link">
         categorized_mns
       </a>
     </li>
@@ -4664,7 +4669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_naming_scheme/easybuild_mns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_naming_scheme/easybuild_mns/" class="md-nav__link">
         easybuild_mns
       </a>
     </li>
@@ -4678,7 +4683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_naming_scheme/hierarchical_mns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_naming_scheme/hierarchical_mns/" class="md-nav__link">
         hierarchical_mns
       </a>
     </li>
@@ -4692,7 +4697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_naming_scheme/migrate_from_eb_to_hmns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_naming_scheme/migrate_from_eb_to_hmns/" class="md-nav__link">
         migrate_from_eb_to_hmns
       </a>
     </li>
@@ -4706,7 +4711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_naming_scheme/mns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_naming_scheme/mns/" class="md-nav__link">
         mns
       </a>
     </li>
@@ -4720,7 +4725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_naming_scheme/toolchain/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_naming_scheme/toolchain/" class="md-nav__link">
         toolchain
       </a>
     </li>
@@ -4734,7 +4739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/module_naming_scheme/utilities/" class="md-nav__link">
+      <a href="../api/easybuild/tools/module_naming_scheme/utilities/" class="md-nav__link">
         utilities
       </a>
     </li>
@@ -4755,7 +4760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/modules/" class="md-nav__link">
+      <a href="../api/easybuild/tools/modules/" class="md-nav__link">
         modules
       </a>
     </li>
@@ -4769,7 +4774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/multidiff/" class="md-nav__link">
+      <a href="../api/easybuild/tools/multidiff/" class="md-nav__link">
         multidiff
       </a>
     </li>
@@ -4783,7 +4788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/options/" class="md-nav__link">
+      <a href="../api/easybuild/tools/options/" class="md-nav__link">
         options
       </a>
     </li>
@@ -4797,7 +4802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/output/" class="md-nav__link">
+      <a href="../api/easybuild/tools/output/" class="md-nav__link">
         output
       </a>
     </li>
@@ -4823,7 +4828,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/package/">package</a>
+          <a href="../api/easybuild/tools/package/">package</a>
           
             <label for="__nav_11_1_6_24">
               <span class="md-nav__icon md-icon"></span>
@@ -4856,7 +4861,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/package/package_naming_scheme/">package_naming_scheme</a>
+          <a href="../api/easybuild/tools/package/package_naming_scheme/">package_naming_scheme</a>
           
             <label for="__nav_11_1_6_24_1">
               <span class="md-nav__icon md-icon"></span>
@@ -4877,7 +4882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/package/package_naming_scheme/easybuild_deb_friendly_pns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/package/package_naming_scheme/easybuild_deb_friendly_pns/" class="md-nav__link">
         easybuild_deb_friendly_pns
       </a>
     </li>
@@ -4891,7 +4896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/package/package_naming_scheme/easybuild_pns/" class="md-nav__link">
         easybuild_pns
       </a>
     </li>
@@ -4905,7 +4910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/package/package_naming_scheme/pns/" class="md-nav__link">
+      <a href="../api/easybuild/tools/package/package_naming_scheme/pns/" class="md-nav__link">
         pns
       </a>
     </li>
@@ -4926,7 +4931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/package/utilities/" class="md-nav__link">
+      <a href="../api/easybuild/tools/package/utilities/" class="md-nav__link">
         utilities
       </a>
     </li>
@@ -4947,7 +4952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/parallelbuild/" class="md-nav__link">
+      <a href="../api/easybuild/tools/parallelbuild/" class="md-nav__link">
         parallelbuild
       </a>
     </li>
@@ -4973,7 +4978,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/py2vs3/">py2vs3</a>
+          <a href="../api/easybuild/tools/py2vs3/">py2vs3</a>
           
             <label for="__nav_11_1_6_26">
               <span class="md-nav__icon md-icon"></span>
@@ -4994,7 +4999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/py2vs3/py2/" class="md-nav__link">
+      <a href="../api/easybuild/tools/py2vs3/py2/" class="md-nav__link">
         py2
       </a>
     </li>
@@ -5008,7 +5013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/py2vs3/py3/" class="md-nav__link">
+      <a href="../api/easybuild/tools/py2vs3/py3/" class="md-nav__link">
         py3
       </a>
     </li>
@@ -5041,7 +5046,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/repository/">repository</a>
+          <a href="../api/easybuild/tools/repository/">repository</a>
           
             <label for="__nav_11_1_6_27">
               <span class="md-nav__icon md-icon"></span>
@@ -5062,7 +5067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/repository/filerepo/" class="md-nav__link">
+      <a href="../api/easybuild/tools/repository/filerepo/" class="md-nav__link">
         filerepo
       </a>
     </li>
@@ -5076,7 +5081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/repository/gitrepo/" class="md-nav__link">
+      <a href="../api/easybuild/tools/repository/gitrepo/" class="md-nav__link">
         gitrepo
       </a>
     </li>
@@ -5090,7 +5095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/repository/hgrepo/" class="md-nav__link">
+      <a href="../api/easybuild/tools/repository/hgrepo/" class="md-nav__link">
         hgrepo
       </a>
     </li>
@@ -5104,7 +5109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/repository/repository/" class="md-nav__link">
+      <a href="../api/easybuild/tools/repository/repository/" class="md-nav__link">
         repository
       </a>
     </li>
@@ -5118,7 +5123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/repository/svnrepo/" class="md-nav__link">
+      <a href="../api/easybuild/tools/repository/svnrepo/" class="md-nav__link">
         svnrepo
       </a>
     </li>
@@ -5139,7 +5144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/robot/" class="md-nav__link">
+      <a href="../api/easybuild/tools/robot/" class="md-nav__link">
         robot
       </a>
     </li>
@@ -5153,7 +5158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/run/" class="md-nav__link">
+      <a href="../api/easybuild/tools/run/" class="md-nav__link">
         run
       </a>
     </li>
@@ -5167,7 +5172,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/systemtools/" class="md-nav__link">
+      <a href="../api/easybuild/tools/systemtools/" class="md-nav__link">
         systemtools
       </a>
     </li>
@@ -5181,7 +5186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/testing/" class="md-nav__link">
+      <a href="../api/easybuild/tools/testing/" class="md-nav__link">
         testing
       </a>
     </li>
@@ -5207,7 +5212,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../tools/toolchain/">toolchain</a>
+          <a href="../api/easybuild/tools/toolchain/">toolchain</a>
           
             <label for="__nav_11_1_6_32">
               <span class="md-nav__icon md-icon"></span>
@@ -5228,7 +5233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/compiler/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/compiler/" class="md-nav__link">
         compiler
       </a>
     </li>
@@ -5242,7 +5247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/constants/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/constants/" class="md-nav__link">
         constants
       </a>
     </li>
@@ -5256,7 +5261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/fft/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/fft/" class="md-nav__link">
         fft
       </a>
     </li>
@@ -5270,7 +5275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/linalg/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/linalg/" class="md-nav__link">
         linalg
       </a>
     </li>
@@ -5284,7 +5289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/mpi/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/mpi/" class="md-nav__link">
         mpi
       </a>
     </li>
@@ -5298,7 +5303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/options/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/options/" class="md-nav__link">
         options
       </a>
     </li>
@@ -5312,7 +5317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/toolchain/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/toolchain/" class="md-nav__link">
         toolchain
       </a>
     </li>
@@ -5326,7 +5331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/toolchainvariables/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/toolchainvariables/" class="md-nav__link">
         toolchainvariables
       </a>
     </li>
@@ -5340,7 +5345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/utilities/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/utilities/" class="md-nav__link">
         utilities
       </a>
     </li>
@@ -5354,7 +5359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/toolchain/variables/" class="md-nav__link">
+      <a href="../api/easybuild/tools/toolchain/variables/" class="md-nav__link">
         variables
       </a>
     </li>
@@ -5375,7 +5380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/utilities/" class="md-nav__link">
+      <a href="../api/easybuild/tools/utilities/" class="md-nav__link">
         utilities
       </a>
     </li>
@@ -5389,7 +5394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/variables/" class="md-nav__link">
+      <a href="../api/easybuild/tools/variables/" class="md-nav__link">
         variables
       </a>
     </li>
@@ -5403,7 +5408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tools/version/" class="md-nav__link">
+      <a href="../api/easybuild/tools/version/" class="md-nav__link">
         version
       </a>
     </li>
@@ -5439,7 +5444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../version-specific/supported-software/" class="md-nav__link">
+      <a href="../version-specific/supported-software/" class="md-nav__link">
         List of supported software
       </a>
     </li>
@@ -5454,7 +5459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting-help/" class="md-nav__link">
+      <a href="../getting-help/" class="md-nav__link">
         Getting help
       </a>
     </li>
@@ -5469,7 +5474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../user-survey/" class="md-nav__link">
+      <a href="../user-survey/" class="md-nav__link">
         User survey
       </a>
     </li>
@@ -5511,7 +5516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../installation-alternative/" class="md-nav__link">
+      <a href="../installation-alternative/" class="md-nav__link">
         Alternative installation methods
       </a>
     </li>
@@ -5525,7 +5530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../legacy/configuration/" class="md-nav__link">
+      <a href="../legacy/configuration/" class="md-nav__link">
         Configuration (legacy)
       </a>
     </li>
@@ -5566,7 +5571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../demos/" class="md-nav__link">
+      <a href="../demos/" class="md-nav__link">
         (overview)
       </a>
     </li>
@@ -5580,7 +5585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../demos/configuring/" class="md-nav__link">
+      <a href="../demos/configuring/" class="md-nav__link">
         Configuring EasyBuild
       </a>
     </li>
@@ -5594,7 +5599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../demos/review-pr/" class="md-nav__link">
+      <a href="../demos/review-pr/" class="md-nav__link">
         eb --review-pr
       </a>
     </li>
@@ -5615,7 +5620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../deprecated-easyconfigs/" class="md-nav__link">
+      <a href="../deprecated-easyconfigs/" class="md-nav__link">
         Deprecated easyconfigs
       </a>
     </li>
@@ -5629,7 +5634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../deprecated-functionality/" class="md-nav__link">
+      <a href="../deprecated-functionality/" class="md-nav__link">
         Deprecated functionality
       </a>
     </li>
@@ -5643,7 +5648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../changelog-docs/" class="md-nav__link">
+      <a href="../changelog-docs/" class="md-nav__link">
         Documentation changelog
       </a>
     </li>
@@ -5684,7 +5689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../easybuild-v4/overview-of-changes/" class="md-nav__link">
+      <a href="../easybuild-v4/overview-of-changes/" class="md-nav__link">
         Overview of changes
       </a>
     </li>
@@ -5698,7 +5703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../easybuild-v4/overview-relocated-functions-constants/" class="md-nav__link">
+      <a href="../easybuild-v4/overview-relocated-functions-constants/" class="md-nav__link">
         Overview of relocated functions/constants
       </a>
     </li>
@@ -5719,7 +5724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../installing-environment-modules-without-root-permissions/" class="md-nav__link">
+      <a href="../installing-environment-modules-without-root-permissions/" class="md-nav__link">
         Installing Environment Modules
       </a>
     </li>
@@ -5733,7 +5738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../installing-lmod-without-root-permissions/" class="md-nav__link">
+      <a href="../installing-lmod-without-root-permissions/" class="md-nav__link">
         Installing Lmod
       </a>
     </li>
@@ -5747,7 +5752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../removed-functionality/" class="md-nav__link">
+      <a href="../removed-functionality/" class="md-nav__link">
         Removed functionality
       </a>
     </li>
@@ -5761,7 +5766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../useful-scripts/" class="md-nav__link">
+      <a href="../useful-scripts/" class="md-nav__link">
         Useful scripts
       </a>
     </li>
@@ -5793,79 +5798,194 @@
   
 
 
-  <h1>mvapich2</h1>
+<h1 id="typical_workflow">Typical workflow example: building and installing WRF<a class="headerlink" href="#typical_workflow" title="Permanent link">&para;</a></h1>
+<p>This section shows an example case of building
+<a href="https://www.mmm.ucar.edu/models/wrf">Weather Research and Forecasting (WRF)</a> scientific software application,
+which is a notoriously complex software application to build and install.
+With EasyBuild however, WRF can be installed quite easily and here is how.</p>
+<p>First, you search which easyconfigs are available for WRF, using <code>--search</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#searching_for_easyconfigs">Searching for easyconfigs, <code>--search</code> / <code>-S</code></a>)
+and you select one based on the software version, toolchain, etc.</p>
+<p>Using the selected easyconfig file, you can get an overview of the planned installations using <code>--dry-run</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#get_an_overview">Getting an overview of planned installations <code>--dry-run</code> / <code>-D</code></a>).</p>
+<p>Finally, building and installing WRF is done by specifying the matching easyconfig file in the eb command line,
+and using <code>--robot</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#use_robot">Enabling dependency resolution, <code>--robot</code> / <code>-r</code> and <code>--robot-paths</code></a>) to enable dependency resolution. That way WRF and all of its dependencies are installed with <strong>a single command</strong>!</p>
+<h2 id="searching-for-available-easyconfigs-files">Searching for available easyconfigs files<a class="headerlink" href="#searching-for-available-easyconfigs-files" title="Permanent link">&para;</a></h2>
+<p>Searching for build specification for a particular software package can be done using the
+<code>--search</code>/<code>-S</code> command line options (see <a class="autorefs autorefs-internal" href="../using-easybuild/#searching_for_easyconfigs">Searching for easyconfigs, <code>--search</code> / <code>-S</code></a>);
+for example, to get a list of available easyconfig files for WRF:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>-S<span class="w"> </span>WRF
+<span class="go">CFGS1=/user/gent/445/vsc44588/easybuild/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="go"> * $CFGS1/w/WPS/WPS-4.0.1_find-wrfdir.patch</span>
+<span class="go"> * $CFGS1/w/WPS/WPS-4.0.2_find-wrfdir.patch</span>
+<span class="go"> [ . . . ]</span>
+<span class="go"> * $CFGS1/w/WRF/WRF-4.4-foss-2022a-dmpar.eb</span>
+<span class="go"> * $CFGS1/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb</span>
+<span class="go"> [ . . . ]</span>
 
-<div class="doc doc-object doc-module">
+<span class="go">Note: 16 matching archived easyconfig(s) found, use --consider-archived-easyconfigs to see them</span>
+</code></pre></div>
+<p>Various easyconfig files are found: for different versions of WRF (e.g., v4.4 and v4.4.1),
+for different (versions of) compiler toolchains (e.g., foss 2022a, foss 2022b), etc.</p>
+<p>For the remainder of this example, we will use the available
+<code>WRF-4.4.1-foss-2022b-dmpar.eb</code> easyconfig file to specify to EasyBuild
+to build and install WRF v4.4.1 using version 2022b of the <code>foss</code>
+toolchain, which is one of the <a class="autorefs autorefs-internal" href="../common-toolchains/#common_toolchains">Common toolchains</a>.  The <code>foss</code>
+toolchain stands for <code>GCC, OpenMPI, OpenBLAS/LAPACK, ScaLAPACK, and FFTW</code>.
+See <a class="autorefs autorefs-internal" href="../version-specific/toolchains/#toolchains_table">List of known toolchains</a> for a list of all available toolchains.</p>
+<h2 id="getting-an-overview-of-planned-installations">Getting an overview of planned installations<a class="headerlink" href="#getting-an-overview-of-planned-installations" title="Permanent link">&para;</a></h2>
+<p>To get an overview of the software that EasyBuild is going to build and install
+we can use the <code>--dry-run</code>/<code>-D</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#get_an_overview">Getting an overview of planned installations <code>--dry-run</code> / <code>-D</code></a>) command line option.
+This will show a list of easyconfig files
+that will be used, together with the module files that will be installed,
+as well as their current availability (<code>[x]</code> marks available modules).</p>
+<p>Note that EasyBuild will take care of all of the dependencies of WRF as well,
+and can even install the compiler toolchain as well if the corresponding modules are not available yet:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>WRF-4.4.1-foss-2022b-dmpar.eb<span class="w"> </span>-Dr
+<span class="go">== Temporary log file in case of crash /tmp/vsc44588/eb-n67uls6o/easybuild-2r30g117.log</span>
+<span class="go">Dry run: printing build status of easyconfigs and dependencies</span>
+<span class="go">CFGS=/user/gent/445/vsc44588/easybuild/easybuild-easyconfigs/easybuild/easyconfigs</span>
+<span class="go"> * [x] $CFGS/m/M4/M4-1.4.19.eb (module: M4/1.4.19)</span>
+<span class="go"> * [x] $CFGS/b/Bison/Bison-3.8.2.eb (module: Bison/3.8.2)</span>
+<span class="go"> * [x] $CFGS/f/flex/flex-2.6.4.eb (module: flex/2.6.4)</span>
+<span class="go"> * [x] $CFGS/z/zlib/zlib-1.2.12.eb (module: zlib/1.2.12)</span>
+<span class="go"> * [x] $CFGS/b/binutils/binutils-2.39.eb (module: binutils/2.39)</span>
+<span class="go"> * [x] $CFGS/g/GCCcore/GCCcore-12.2.0.eb (module: GCCcore/12.2.0)</span>
+<span class="go"> * [x] $CFGS/z/zlib/zlib-1.2.12-GCCcore-12.2.0.eb (module: zlib/1.2.12-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/h/help2man/help2man-1.49.2-GCCcore-12.2.0.eb (module: help2man/1.49.2-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/m/M4/M4-1.4.19-GCCcore-12.2.0.eb (module: M4/1.4.19-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/b/Bison/Bison-3.8.2-GCCcore-12.2.0.eb (module: Bison/3.8.2-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/f/flex/flex-2.6.4-GCCcore-12.2.0.eb (module: flex/2.6.4-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/b/binutils/binutils-2.39-GCCcore-12.2.0.eb (module: binutils/2.39-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/libtool/libtool-2.4.7-GCCcore-12.2.0.eb (module: libtool/2.4.7-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/n/ncurses/ncurses-6.3-GCCcore-12.2.0.eb (module: ncurses/6.3-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/g/groff/groff-1.22.4-GCCcore-12.2.0.eb (module: groff/1.22.4-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/e/expat/expat-2.4.9-GCCcore-12.2.0.eb (module: expat/2.4.9-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/b/bzip2/bzip2-1.0.8-GCCcore-12.2.0.eb (module: bzip2/1.0.8-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/libreadline/libreadline-8.2-GCCcore-12.2.0.eb (module: libreadline/8.2-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/p/pkgconf/pkgconf-1.9.3-GCCcore-12.2.0.eb (module: pkgconf/1.9.3-GCCcore-12.2.0)</span>
+<span class="go"> * [ ] $CFGS/t/tcsh/tcsh-6.24.07-GCCcore-12.2.0.eb (module: tcsh/6.24.07-GCCcore-12.2.0)</span>
+<span class="go"> * [ ] $CFGS/t/time/time-1.9-GCCcore-12.2.0.eb (module: time/1.9-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/s/Szip/Szip-2.1.1-GCCcore-12.2.0.eb (module: Szip/2.1.1-GCCcore-12.2.0)</span>
+<span class="go"> * [ ] $CFGS/l/libiconv/libiconv-1.17-GCCcore-12.2.0.eb (module: libiconv/1.17-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/g/GCC/GCC-12.2.0.eb (module: GCC/12.2.0)</span>
+<span class="go"> * [x] $CFGS/p/pkgconf/pkgconf-1.8.0.eb (module: pkgconf/1.8.0)</span>
+<span class="go"> * [x] $CFGS/o/OpenSSL/OpenSSL-1.1.eb (module: OpenSSL/1.1)</span>
+<span class="go"> * [x] $CFGS/c/cURL/cURL-7.86.0-GCCcore-12.2.0.eb (module: cURL/7.86.0-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/d/DB/DB-18.1.40-GCCcore-12.2.0.eb (module: DB/18.1.40-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/p/Perl/Perl-5.36.0-GCCcore-12.2.0.eb (module: Perl/5.36.0-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/a/Autoconf/Autoconf-2.71-GCCcore-12.2.0.eb (module: Autoconf/2.71-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/a/Automake/Automake-1.16.5-GCCcore-12.2.0.eb (module: Automake/1.16.5-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/a/Autotools/Autotools-20220317-GCCcore-12.2.0.eb (module: Autotools/20220317-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/g/gzip/gzip-1.12-GCCcore-12.2.0.eb (module: gzip/1.12-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/f/FFTW/FFTW-3.3.10-GCC-12.2.0.eb (module: FFTW/3.3.10-GCC-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/lz4/lz4-1.9.4-GCCcore-12.2.0.eb (module: lz4/1.9.4-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/libevent/libevent-2.1.12-GCCcore-12.2.0.eb (module: libevent/2.1.12-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/n/numactl/numactl-2.0.16-GCCcore-12.2.0.eb (module: numactl/2.0.16-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/n/ncurses/ncurses-6.3.eb (module: ncurses/6.3)</span>
+<span class="go"> * [x] $CFGS/g/gettext/gettext-0.21.1.eb (module: gettext/0.21.1)</span>
+<span class="go"> * [x] $CFGS/x/XZ/XZ-5.2.7-GCCcore-12.2.0.eb (module: XZ/5.2.7-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/libxml2/libxml2-2.10.3-GCCcore-12.2.0.eb (module: libxml2/2.10.3-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/libarchive/libarchive-3.6.1-GCCcore-12.2.0.eb (module: libarchive/3.6.1-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/z/zstd/zstd-1.5.2-GCCcore-12.2.0.eb (module: zstd/1.5.2-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/c/CMake/CMake-3.24.3-GCCcore-12.2.0.eb (module: CMake/3.24.3-GCCcore-12.2.0)</span>
+<span class="go"> * [ ] $CFGS/d/Doxygen/Doxygen-1.9.5-GCCcore-12.2.0.eb (module: Doxygen/1.9.5-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/j/JasPer/JasPer-4.0.0-GCCcore-12.2.0.eb (module: JasPer/4.0.0-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/u/UCX/UCX-1.13.1-GCCcore-12.2.0.eb (module: UCX/1.13.1-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/u/UnZip/UnZip-6.0-GCCcore-12.2.0.eb (module: UnZip/6.0-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/libfabric/libfabric-1.16.1-GCCcore-12.2.0.eb (module: libfabric/1.16.1-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/x/xorg-macros/xorg-macros-1.19.3-GCCcore-12.2.0.eb (module: xorg-macros/1.19.3-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/libpciaccess/libpciaccess-0.17-GCCcore-12.2.0.eb (module: libpciaccess/0.17-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/h/hwloc/hwloc-2.8.0-GCCcore-12.2.0.eb (module: hwloc/2.8.0-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/p/PMIx/PMIx-4.2.2-GCCcore-12.2.0.eb (module: PMIx/4.2.2-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/l/libffi/libffi-3.4.4-GCCcore-12.2.0.eb (module: libffi/3.4.4-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/t/Tcl/Tcl-8.6.12-GCCcore-12.2.0.eb (module: Tcl/8.6.12-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/s/SQLite/SQLite-3.39.4-GCCcore-12.2.0.eb (module: SQLite/3.39.4-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/p/Python/Python-3.10.8-GCCcore-12.2.0-bare.eb (module: Python/3.10.8-GCCcore-12.2.0-bare)</span>
+<span class="go"> * [x] $CFGS/b/BLIS/BLIS-0.9.0-GCC-12.2.0.eb (module: BLIS/0.9.0-GCC-12.2.0)</span>
+<span class="go"> * [x] $CFGS/o/OpenBLAS/OpenBLAS-0.3.21-GCC-12.2.0.eb (module: OpenBLAS/0.3.21-GCC-12.2.0)</span>
+<span class="go"> * [x] $CFGS/f/FlexiBLAS/FlexiBLAS-3.2.1-GCC-12.2.0.eb (module: FlexiBLAS/3.2.1-GCC-12.2.0)</span>
+<span class="go"> * [x] $CFGS/u/UCC/UCC-1.1.0-GCCcore-12.2.0.eb (module: UCC/1.1.0-GCCcore-12.2.0)</span>
+<span class="go"> * [x] $CFGS/o/OpenMPI/OpenMPI-4.1.4-GCC-12.2.0.eb (module: OpenMPI/4.1.4-GCC-12.2.0)</span>
+<span class="go"> * [x] $CFGS/g/gompi/gompi-2022b.eb (module: gompi/2022b)</span>
+<span class="go"> * [x] $CFGS/f/FFTW.MPI/FFTW.MPI-3.3.10-gompi-2022b.eb (module: FFTW.MPI/3.3.10-gompi-2022b)</span>
+<span class="go"> * [x] $CFGS/s/ScaLAPACK/ScaLAPACK-2.2.0-gompi-2022b-fb.eb (module: ScaLAPACK/2.2.0-gompi-2022b-fb)</span>
+<span class="go"> * [x] $CFGS/f/foss/foss-2022b.eb (module: foss/2022b)</span>
+<span class="go"> * [x] $CFGS/h/HDF5/HDF5-1.14.0-gompi-2022b.eb (module: HDF5/1.14.0-gompi-2022b)</span>
+<span class="go"> * [ ] $CFGS/n/netCDF/netCDF-4.9.0-gompi-2022b.eb (module: netCDF/4.9.0-gompi-2022b)</span>
+<span class="go"> * [ ] $CFGS/n/netCDF-Fortran/netCDF-Fortran-4.6.0-gompi-2022b.eb (module: netCDF-Fortran/4.6.0-gompi-2022b)</span>
+<span class="go"> * [ ] $CFGS/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb (module: WRF/4.4.1-foss-2022b-dmpar)</span>
+<span class="go">== Temporary log file(s) /tmp/eb-n67uls6o/easybuild-2r30g117.log* have been removed.</span>
+<span class="go">== Temporary directory /tmp/eb-n67uls6o has been removed.</span>
+</code></pre></div>
+<h2 id="installing-a-software-stack">Installing a software stack<a class="headerlink" href="#installing-a-software-stack" title="Permanent link">&para;</a></h2>
+<p>To make EasyBuild build and install WRF, including all of its dependencies, a <strong>single command</strong> is sufficient.</p>
+<p>By using the <code>--robot</code>/<code>-r</code> (see <a class="autorefs autorefs-internal" href="../using-easybuild/#use_robot">Enabling dependency resolution, <code>--robot</code> / <code>-r</code> and <code>--robot-paths</code></a>) command line option,
+we enable dependency resolution such that the entire software stack is handled:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>WRF-4.4.1-foss-2022b-dmpar.eb<span class="w"> </span>--robot
+<span class="go">== temporary log file in case of crash /tmp/eb-LfQa8b/easybuild-TBXLTy.log</span>
+<span class="go">== resolving dependencies ...</span>
+<span class="go">== processing EasyBuild easyconfig /home/example/.local/easybuild/software/EasyBuild/4.7.1/easybuild/easyconfigs/w/WRF/WRF-4.4.1-foss-2022b-dmpar.eb</span>
+<span class="go">== building and installing ncurses/6.3-GCCcore-12.2.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing tcsh/6.20.00-GCCcore-12.2.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing CMake/3.24.3-GCCcore-12.2.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing JasPer/4.0.0-GCCcore-12.2.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing pkg-config/0.29.2-GCCcore-12.2.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing Doxygen/1.9.5-GCCcore-12.2.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing cURL/7.86.0-GCCcore-12.2.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing Szip/2.1.1-GCCcore-12.2.0...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing HDF5/1.14.0-gompi-2022b...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing netCDF/4.9.0-foss-2022b...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing netCDF-Fortran/4.6.0-foss-2022b...</span>
+<span class="go">[...]</span>
+<span class="go">== building and installing WRF/4.4.1-foss-2022b-dmpar...</span>
+<span class="go">[...]</span>
+<span class="go">== Build succeeded for 12 out of 12</span>
+<span class="go">== Temporary log file(s) /tmp/eb-LfQa8b/easybuild-TBXLTy.log* have been removed.</span>
+<span class="go">== Temporary directory /tmp/eb-LfQa8b has been removed.</span>
+</code></pre></div>
+<p>Once the installation has succeeded, modules will be available for WRF and all of its dependencies:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>load<span class="w"> </span>WRF/4.4.1-foss-2022b-dmpar
+<span class="gp">$ </span>module<span class="w"> </span>list
 
+<span class="go">Currently Loaded Modules:</span>
+<span class="go">  1) EasyBuild/4.7.2                    18) OpenBLAS/0.3.21-GCC-12.2.0</span>
+<span class="go">  2) GCCcore/12.2.0                     19) FlexiBLAS/3.2.1-GCC-12.2.0</span>
+<span class="go">  3) zlib/1.2.12-GCCcore-12.2.0         20) FFTW/3.3.10-GCC-12.2.0 foss/2018b</span>
+<span class="go">  4) binutils/2.39-GCCcore-12.2.0       21) gompi/2022b</span>
+<span class="go">  5) GCC/12.2.0                         22) FFTW.MPI/3.3.10-gompi-2022b</span>
+<span class="go">  6) numactl/2.0.16-GCCcore-12.2.0      23) foss/2022b</span>
+<span class="go">  7) XZ/5.2.7-GCCcore-12.2.0            24) JasPer/4.0.0-GCCcore-12.2.0</span>
+<span class="go">  8) libxml2/2.10.3-GCCcore-12.2.0      25) Szip/2.1.1-GCCcore-12.2.0</span>
+<span class="go">  9) libpciaccess/0.17-GCCcore-12.2.0   26) HDF5/1.14.0-gompi-2022b</span>
+<span class="go"> 10) hwloc/2.8.0-GCCcore-12.2.0         27) cURL/7.86.0-GCCcore-12.2.0</span>
+<span class="go"> 11) OpenSSL/1.1                        28) gzip/1.12-GCCcore-12.2.0</span>
+<span class="go"> 12) libevent/2.1.12-GCCcore-12.2.0     29) lz4/1.9.4-GCCcore-12.2.0</span>
+<span class="go"> 13) UCX/1.13.1-GCCcore-12.2.0          30) zstd/1.5.2-GCCcore-12.2.0</span>
+<span class="go"> 14) libfabric/1.16.1-GCCcore-12.2.0    31) bzip2/1.0.8-GCCcore-12.2.0</span>
+<span class="go"> 15) PMIx/4.2.2-GCCcore-12.2.0          32) netCDF/4.9.0-gompi-2022b</span>
+<span class="go"> 16) UCC/1.1.0-GCCcore-12.2.0           33) netCDF-Fortran/4.6.0-gompi-2022b</span>
+<span class="go"> 17) OpenMPI/4.1.4-GCC-12.2.0           34) WRF/4.4.1-foss-2022b-dmpar</span>
+</code></pre></div>
+<p>For more information, see also <a href="../using-easybuild/">Using EasyBuild</a>.</p>
 
-<a id="easybuild.toolchains.mpi.mvapich2"></a>
-  <div class="doc doc-contents first">
-  
-      <p>Support for MVAPICH2 as toolchain MPI library.</p>
-<p>Authors:</p>
-<ul>
-<li>Stijn De Weirdt (Ghent University)</li>
-<li>Kenneth Hoste (Ghent University)</li>
-</ul>
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-<div class="doc doc-object doc-class">
-
-
-
-<h2 id="easybuild.toolchains.mpi.mvapich2.Mvapich2" class="doc doc-heading">
-        <code>Mvapich2</code>
-
-
-<a href="#easybuild.toolchains.mpi.mvapich2.Mvapich2" class="headerlink" title="Permanent link">&para;</a></h2>
-
-
-  <div class="doc doc-contents ">
-      <p class="doc doc-class-bases">
-        Bases: <code><a class="autorefs autorefs-internal" title="easybuild.toolchains.mpi.mpich2.Mpich2" href="../mpich2/#easybuild.toolchains.mpi.mpich2.Mpich2">Mpich2</a></code></p>
-
-  
-      <p>MVAPICH2 MPI class</p>
-
-
-
-  
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-  </div>
-
-</div>
-
-
-
-
-  </div>
-
-  </div>
-
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 10, 2023</span>
+      
+    
+  </small>
 </div>
 
 
@@ -5948,12 +6068,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.top", "navigation.tracking", "toc.follow", "toc.integrate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      <script src="../assets/javascripts/bundle.b4d07000.min.js"></script>
       
-        <script src="../../../../../js/asciinema-player-2.6.1.js"></script>
+        <script src="../js/asciinema-player-2.6.1.js"></script>
       
     
   </body>
