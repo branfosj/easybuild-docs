@@ -2,6 +2,7 @@
 search:
   boost: 0.5
 ---
+
 # Backing up of existing modules {: #backup_modules }
 
 While regenerating existing module files, you may want to preserve the
