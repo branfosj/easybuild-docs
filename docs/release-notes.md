@@ -2,6 +2,7 @@
 search:
   boost: 0.5
 ---
+
 # EasyBuild release notes {: #release_notes }
 
 The latest version of EasyBuild provides support for building and
