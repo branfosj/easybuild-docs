@@ -17,7 +17,7 @@
         <link rel="next" href="../easyconfig/">
       
       <link rel="icon" href="../../../../favicon.ico">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.15">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.85bb2934.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.26e3688c.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a6bdf11c.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -1979,6 +1979,13 @@
           <li class="md-nav__item">
   <a href="#easybuild.framework.easyblock.EasyBlock.make_dir" class="md-nav__link">
     make_dir()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easybuild.framework.easyblock.EasyBlock.make_extension_string" class="md-nav__link">
+    make_extension_string()
   </a>
   
 </li>
@@ -5022,6 +5029,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../tools/containers/apptainer/" class="md-nav__link">
+        apptainer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../tools/containers/base/" class="md-nav__link">
         base
       </a>
@@ -8032,6 +8053,25 @@ to the devel module file. So now you can module load $EBDEVELNAME.</p>
 
 
 
+<h3 id="easybuild.framework.easyblock.EasyBlock.make_extension_string" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">make_extension_string</span><span class="p">(</span><span class="n">name_version_sep</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">ext_sep</span><span class="o">=</span><span class="s1">&#39;, &#39;</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
+
+<a href="#easybuild.framework.easyblock.EasyBlock.make_extension_string" class="headerlink" title="Permanent link">&para;</a></h3>
+
+
+  <div class="doc doc-contents ">
+  
+      <p>Generate a string with a list of extensions.</p>
+<p>The name and version are separated by name_version_sep and each extension is separated by ext_sep</p>
+
+  </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+
 <h3 id="easybuild.framework.easyblock.EasyBlock.make_installdir" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">make_installdir</span><span class="p">(</span><span class="n">dontcreate</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
 
@@ -8852,7 +8892,7 @@ run_test_cases (bool): run tests after building (e.g.: make test)</p>
 
 
 <h3 id="easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">sanity_check_rpath</span><span class="p">(</span><span class="n">rpath_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">sanity_check_rpath</span><span class="p">(</span><span class="n">rpath_dirs</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">check_readelf_rpath</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></code>
 
 <a href="#easybuild.framework.easyblock.EasyBlock.sanity_check_rpath" class="headerlink" title="Permanent link">&para;</a></h3>
 
