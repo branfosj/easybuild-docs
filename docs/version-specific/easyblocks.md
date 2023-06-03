@@ -233,12 +233,15 @@
   - EB_WRF
   - EB_WRF_minus_Fire
   - ExtensionEasyBlock
+    - Cargo
+      - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
     - OCamlPackage
     - OctavePackage
     - PerlModule
     - PythonPackage
+      - CargoPythonPackage
       - CMakePythonPackage
         - EB_DOLFIN
         - EB_pybind11
@@ -258,6 +261,7 @@
       - EB_python_minus_meep
       - EB_PyTorch
       - EB_PyZMQ
+      - EB_scipy
       - EB_SEPP
       - EB_TensorFlow
       - EB_TensorRT
@@ -314,6 +318,7 @@
   - MesonNinja
     - CMakeNinja
     - EB_Mesa
+    - EB_scipy
   - ModuleRC
   - PackedBinary
     - EB_ANSYS
@@ -342,12 +347,15 @@
   - Waf
 - **Extension**
   - ExtensionEasyBlock
+    - Cargo
+      - CargoPythonPackage
     - EB_Scipion
     - JuliaPackage
     - OCamlPackage
     - OctavePackage
     - PerlModule
     - PythonPackage
+      - CargoPythonPackage
       - CMakePythonPackage
         - EB_DOLFIN
         - EB_pybind11
@@ -367,6 +375,7 @@
       - EB_python_minus_meep
       - EB_PyTorch
       - EB_PyZMQ
+      - EB_scipy
       - EB_SEPP
       - EB_TensorFlow
       - EB_TensorRT

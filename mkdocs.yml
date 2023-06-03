@@ -16,7 +16,20 @@ theme:
     - search.highlight
     - search.suggest
   palette:
-    scheme: easybuild
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
   - stylesheets/asciinema-player-2.6.1.css
@@ -35,7 +48,7 @@ nav:
       - Installation: installation.md
       - Configuration: configuration.md
       - Basic usage: using-easybuild.md
-      - Typical workflow with WRF: typical-workflow-example-with-wrf.md
+      - Typical workflow example: typical-workflow-example.md
   - Using EasyBuild:
       - Backing up existing modules: backup-modules.md
       - Common toolchains: common-toolchains.md
@@ -69,6 +82,7 @@ nav:
       - Implementing easyblocks: implementing-easyblocks.md
       - Local variables in easyconfigs: easyconfig-files-local-variables.md
       - Unit tests: unit-tests.md
+      - Framework Overview: framework-overview.md
   - Experimental features:
       - (overview): experimental-features.md
       - Creating container images/recipes: containers.md
@@ -93,6 +107,7 @@ nav:
   - API: api/
   - List of supported software: version-specific/supported-software.md
   - Getting help: getting-help.md
+  - User survey: user-survey/index.md
   - Other topics:
       - Alternative installation methods: installation-alternative.md
       - Configuration (legacy): legacy/configuration.md
@@ -116,21 +131,31 @@ markdown_extensions:
   - attr_list
   # notes, warnings, hints, ...
   - admonition
+  # markdown in HTML (image captions, ...)
+  - md_in_html
   # code blocks with syntax highlighting, graphs
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   # clickable details
   - pymdownx.details
   # tabbed contents
   - pymdownx.tabbed
   - toc:
       permalink: true
-
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 extra:
   analytics:
     provider: google
     property: G-BLVCH6991S
   easybuild:
-    version: 4.7.0
+    version: 4.7.2
   # add links in bottom right
   social:
     - icon: fontawesome/brands/twitter
@@ -220,6 +245,7 @@ plugins:
         en/latest/System_toolchain.html: system-toolchain.md
         en/latest/Tracing_progress.html: tracing-progress.md
         en/latest/Typical_workflow_example_with_WRF.html: typical-workflow-example-with-wrf.md
+        typical-workflow-example-with-wrf.md: typical-workflow-example.md
         en/latest/Unit-tests.html: unit-tests.md
         en/latest/Useful_links.html: index.md
         en/latest/Useful-scripts.html: useful-scripts.md
