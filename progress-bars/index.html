@@ -7883,7 +7883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../version-specific/supported-software/index.md" class="md-nav__link">
+      <a href="../version-specific/supported-software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8447,7 +8447,7 @@ by default, if the <a href="https://pypi.org/project/rich/"><code>Rich</code></a
 <p>The progress bars shown by EasyBuild are <em>dynamic</em>: they are only visible when they are relevant.</p>
 <p>Note that for most progress bars each step is treated as being equal even though the time taken for the
 various steps varies. There are many factors that impact how long an individual installation step, installing
-an easyconfig, or installing an extension may and this makes it very difficult to get a good estimate on how
+an easyconfig, or installing an extension may take and this makes it very difficult to get a good estimate on how
 much time will be needed.
 The download progress bar is an exception here (as long as the size of the file to download could be determined first).</p>
 <h2 id="types-of-progress-bars">Types of progress bars<a class="headerlink" href="#types-of-progress-bars" title="Permanent link">&para;</a></h2>
@@ -8510,13 +8510,14 @@ which shows:</p>
 <li>The total amount of time spent installing extensions for this easyconfig.</li>
 </ul>
 <h2 id="relevant-configuration-options">Relevant configuration options<a class="headerlink" href="#relevant-configuration-options" title="Permanent link">&para;</a></h2>
+<p>For information about configuring EasyBuild, see <a href="https://docs.easybuild.io/configuration/">Configuring Easybuild</a>.</p>
 <h3 id="output-style"><code>output-style</code><a class="headerlink" href="#output-style" title="Permanent link">&para;</a></h3>
 <p>The <code>output-style</code> configuration option determines the output style of the <code>eb</code> command.</p>
 <p>Setting <code>output-style</code> to '<code>rich</code>' results in rich output being produced, which includes progress bars.
 This also makes <code>Rich</code> a <em>required</em> dependency for EasyBuild.</p>
 <p>Using '<code>basic</code>' as value for <code>output-style</code> results in basic output (no progress bars).</p>
 <p>By default <code>output-style</code> is set to '<code>auto</code>', which implies using the <code>Rich</code> Python package to produce
-rich output (incl. progress bars) if is available,
+rich output (incl. progress bars) if <code>Rich</code> is available,
 and falling back to using the basic output style if <code>Rich</code> is not available.</p>
 <h3 id="show-progress-bar"><code>show-progress-bar</code><a class="headerlink" href="#show-progress-bar" title="Permanent link">&para;</a></h3>
 <p>The <code>show-progress-bar</code> configuration option (enabled by default) controls whether or not
@@ -8541,7 +8542,7 @@ progress bars are shown, regardless of the active output style and whether <code
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 6, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2024</span>
   </span>
 
     

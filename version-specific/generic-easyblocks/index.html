@@ -9146,7 +9146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../supported-software/index.md" class="md-nav__link">
+      <a href="../supported-software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -10482,6 +10482,11 @@ to generate a module file which sets the PYTHONPATH.</p>
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>prefix_opt</code></td>
 <td>Prefix command line option for configure script ('--prefix=' if None)</td>
 <td><code>None</code></td>
@@ -10740,6 +10745,11 @@ but all the build steps are triggered like normal.</p>
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>req_py_majver</code></td>
 <td>Required major Python version (only relevant when using system Python)</td>
 <td><code>None</code></td>
@@ -10894,6 +10904,11 @@ but all the build steps are triggered via normal PythonPackage steps like normal
 <tr>
 <td><code>pip_no_index</code></td>
 <td>Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
 <td><code>None</code></td>
 </tr>
 <tr>
@@ -11360,6 +11375,11 @@ Just run the specified command for all sources, and copy specified files to the 
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>prefix_opt</code></td>
 <td>Prefix command line option for configure script ('--prefix=' if None)</td>
 <td><code>None</code></td>
@@ -11590,6 +11610,11 @@ Just run the specified command for all sources, and copy specified files to the 
 <tr>
 <td><code>pip_no_index</code></td>
 <td>Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
 <td><code>None</code></td>
 </tr>
 <tr>
@@ -12375,6 +12400,11 @@ Defines custom sanity checks and module environment</p>
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>req_py_majver</code></td>
 <td>Required major Python version (only relevant when using system Python)</td>
 <td><code>None</code></td>
@@ -12507,6 +12537,11 @@ Defines custom sanity checks and module environment</p>
 <tr>
 <td><code>pip_no_index</code></td>
 <td>Pass --no-index to pip to disable connecting to PyPi entirely which also disables the pip version check. Enabled by default when pip_ignore_installed=True</td>
+<td><code>None</code></td>
+</tr>
+<tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
 <td><code>None</code></td>
 </tr>
 <tr>
@@ -12914,6 +12949,11 @@ if an actual version is specified, it is checked against the derived version of 
 <td><code>False</code></td>
 </tr>
 <tr>
+<td><code>rename_include_fixed</code></td>
+<td>Rename the 'include-fixed' directory to avoid that it is used by GCC. This avoids issues when upgrading the OS but might limit the functionality of GCC, especially if the OS GLIBC is older than GCC. A script to (re-)generate the include-fixed folder is created in the 'easybuild' subfolder inside the installation directory.</td>
+<td><code>False</code></td>
+</tr>
+<tr>
 <td><code>requires_runtime_license</code></td>
 <td>Boolean indicating whether or not a runtime license is required</td>
 <td><code>True</code></td>
@@ -13314,6 +13354,11 @@ if an actual version is specified, it is checked against the derived version of 
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>req_py_majver</code></td>
 <td>Required major Python version (only relevant when using system Python)</td>
 <td><code>None</code></td>
@@ -13439,6 +13484,11 @@ if an actual version is specified, it is checked against the derived version of 
 <td><code>None</code></td>
 </tr>
 <tr>
+<td><code>pip_verbose</code></td>
+<td>Pass --verbose to 'pip install' (if pip is used). Enabled by default if the EB option --debug is used.</td>
+<td><code>None</code></td>
+</tr>
+<tr>
 <td><code>req_py_majver</code></td>
 <td>Required major Python version (only relevant when using system Python)</td>
 <td><code>None</code></td>
@@ -13557,7 +13607,7 @@ if an actual version is specified, it is checked against the derived version of 
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 30, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 4, 2024</span>
   </span>
 
     

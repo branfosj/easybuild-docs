@@ -7865,7 +7865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../version-specific/supported-software/index.md" class="md-nav__link">
+      <a href="../version-specific/supported-software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -8435,20 +8435,20 @@ and should not be reinstalled as modules by EasyBuild.</p>
 <ul>
 <li>
 <p>overview of dependencies of HDF5:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.8.13-intel-2015a.eb<span class="w"> </span>-D
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.12.2-iimpi-2022a.eb<span class="w"> </span>-D
 <span class="go">...</span>
-<span class="go">* [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
-<span class="go">* [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/1.2.8-intel-2015a)</span>
-<span class="go">* [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/2.1-intel-2015a)</span>
-<span class="go">* [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)</span>
+<span class="go">* [ ] $CFGS/i/iimpi/iimpi-2022a.eb (module: iimpi/2022a)</span>
+<span class="go">* [ ] $CFGS/z/zlib/zlib-1.2.12.eb (module: zlib/1.2.12)</span>
+<span class="go">* [ ] $CFGS/s/Szip/Szip-2.1.1-GCCcore-11.3.0.eb (module: Szip/2.1.1-GCCcore-11.3.0)</span>
+<span class="go">* [ ] $CFGS/h/HDF5/HDF5-1.12.2-iimpi-2022a.eb (module: HDF5/1.12.2-iimpi-2022a)</span>
 </code></pre></div>
 </li>
 <li>
 <p>overview of dependencies of HDF5, with zlib and Szip excluded:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.8.13-intel-2015a.eb<span class="w"> </span>--filter-deps<span class="o">=</span>zlib,Szip<span class="w"> </span>-D
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.12.2-iimpi-2022a.eb<span class="w"> </span>--filter-deps<span class="o">=</span>zlib,Szip<span class="w"> </span>-D
 <span class="go">...</span>
-<span class="go">* [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
-<span class="go">* [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)</span>
+<span class="go">* [ ] $CFGS/i/iimpi/iimpi-2022a.eb (module: iimpi/2022a)</span>
+<span class="go">* [ ] $CFGS/h/HDF5/HDF5-1.12.2-iimpi-2022a.eb (module: HDF5/1.12.2-iimpi-2022a)</span>
 </code></pre></div>
 </li>
 </ul>
@@ -8463,11 +8463,11 @@ and should not be reinstalled as modules by EasyBuild.</p>
   should be filtered out</li>
 <li>examples: <code>zlib=1.2.8</code>, <code>ncurses=5.9</code></li>
 <li><code>&lt;name&gt;=&lt;lower_limit&gt;:&lt;upper_limit&gt;</code>: a software name and a version range, to indicate that any version
-  of this dependency that falls <em>within the specified range</em> should be filtered out</li>
+  of this dependency that falls <strong>within the specified range</strong> should be filtered out</li>
 </ul>
 <p>When a version range is specified, a lower limit and/or upper limit <em>can</em> be specified (separated by <code>:</code>).
 In other words, the version range can be open ended. The <code>:</code> separator is strictly required.</p>
-<p>For both limits, you <em>must</em> indicate whether it is either:</p>
+<p>For both limits, you <strong>must</strong> indicate whether it is either:</p>
 <ul>
 <li><em>inclusive</em>, by using <code>[</code> for the lower limit, and <code>]</code> for the upper limit</li>
 <li><em>exclusive</em>, by using <code>]</code> for the lower limit, and <code>[</code> for the upper limit</li>
@@ -8483,17 +8483,17 @@ In other words, the version range can be open ended. The <code>:</code> separato
 '<code>module avail</code>', but can be loaded) whenever they are included as a dependency, via the <code>--hide-deps</code>
 configuration option.</p>
 <p>For example (note the preceding '<code>.</code>' in the last part of the module names for zlib and Szip):</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.8.13-intel-2015a.eb<span class="w"> </span>--hide-deps<span class="o">=</span>zlib,Szip<span class="w"> </span>-D
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>HDF5-1.12.2-iimpi-2022a.eb<span class="w"> </span>--hide-deps<span class="o">=</span>zlib,Szip<span class="w"> </span>-D
 <span class="go">...</span>
-<span class="go">* [ ] $CFGS/i/intel/intel-2015a.eb (module: intel/2015a)</span>
-<span class="go">* [ ] $CFGS/z/zlib/zlib-1.2.8-intel-2015a.eb (module: zlib/.1.2.8-intel-2015a)</span>
-<span class="go">* [ ] $CFGS/s/Szip/Szip-2.1-intel-2015a.eb (module: Szip/.2.1-intel-2015a)</span>
-<span class="go">* [ ] $CFGS/h/HDF5/HDF5-1.8.13-intel-2015a.eb (module: HDF5/1.8.13-intel-2015a)</span>
+<span class="go">* [ ] $CFGS/i/iimpi/iimpi-2022a.eb (module: iimpi/2022a)</span>
+<span class="go">* [ ] $CFGS/z/zlib/zlib-1.2.12-GCCcore-11.3.0.eb (module: zlib/.1.2.12-GCCcore-11.3.0)</span>
+<span class="go">* [ ] $CFGS/s/Szip/Szip-2.1.1-GCCcore-11.3.0.eb (module: Szip/.2.1.1-GCCcore-11.3.0)</span>
+<span class="go">* [ ] $CFGS/h/HDF5/HDF5-1.12.2-iimpi-2022a.eb (module: HDF5/1.12.2-iimpi-2022a)</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Using Lmod (version &gt;= 5.7.5), hidden modules can be made visible in the output of '<code>module avail</code>' using the
-<code>--show-hidden</code> option.</p>
+<p>Using Lmod (version &gt;= 5.7.5) or Environment Modules (version &gt;= 4.6.0), hidden modules can be made
+visible in the output of '<code>module avail</code>' using respectively the <code>--show-hidden</code> or <code>--all</code> option.</p>
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>module<span class="w"> </span>avail<span class="w"> </span>bzip2
 
@@ -8502,7 +8502,7 @@ configuration option.</p>
 
 <span class="gp">$ </span>module<span class="w"> </span>--show-hidden<span class="w"> </span>avail<span class="w"> </span>bzip2
 <span class="go">----- /home/example/.local/easybuild/modules/all -----</span>
-<span class="go">bzip2/.1.0.6</span>
+<span class="go">bzip2/.1.0.8</span>
 
 <span class="go">Use &quot;module spider&quot; to find all possible modules.</span>
 <span class="go">Use &quot;module keyword key1 key2 ...&quot; to search for all possible modules matching any of the &quot;keys&quot;.</span>
@@ -8544,30 +8544,29 @@ available easyconfig files.</p>
 <h3 id="minimal_toolchains_example">Example<a class="headerlink" href="#minimal_toolchains_example" title="Permanent link">&para;</a></h3>
 <p>Consider the following (partial) easyconfig file for Python v2.7.9 with the <code>foss/2015b</code> toolchain:</p>
 <div class="highlight"><pre><span></span><code><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Python&#39;</span>
-<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;2.7.9&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;3.10.8&#39;</span>
 
-<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2015b&#39;</span><span class="p">}</span>
+<span class="n">toolchain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;foss&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="s1">&#39;2022b&#39;</span><span class="p">}</span>
 
 <span class="n">dependencies</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="p">(</span><span class="s1">&#39;zlib&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.8&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;zlib&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.12&#39;</span><span class="p">),</span>
 <span class="p">]</span>
 </code></pre></div>
 <p>When the <code>--minimal-toolchains</code> configuration option is enabled, EasyBuild will also consider the subtoolchains
-<code>GCC/4.9.3</code> and <code>gompi/2015b</code> of the <code>foss/2015b</code> toolchain (in that order) as potential minimal toolchains
+<code>GCC/12.2.0</code> and <code>gompi/2022b</code> of the <code>foss/2022b</code> toolchain (in that order) as potential minimal toolchains
 when determining the toolchain to use for dependencies.</p>
-<p>So, for the zlib v1.2.8 dependency included in the example above, the following scenarios are possible:</p>
+<p>So, for the zlib v1.2.12 dependency included in the example above, the following scenarios are possible:</p>
 <ul>
 <li>without the use of <code>--minimal-toolchains</code>, the default behaviour of EasyBuild is to first consider the
-  <code>foss/2015b</code> toolchain for zlib v1.2.8, if no such easyconfig file is found, it will continue searching using the
-  <code>gompi/2015b</code> toolchain, and finally the <code>GCC/4.9.3</code> toolchain</li>
+  <code>foss/2022b</code> toolchain for zlib v1.2.12, if no such easyconfig file is found, it will continue searching using the
+  <code>gompi/2022b</code> toolchain, and finally the <code>GCC/12.2.0</code> toolchain</li>
 <li>if (only) <code>--minimal-toolchains</code> is enabled, EasyBuild will search for an easyconfig file for
-  zlib v1.2.8 using the <code>GCC/4.9.3</code> toolchain; if no such easyconfig file is found, it will continue searching
-  using the <code>gompi/2015b</code> toolchain, and finally the <code>foss/2015b</code> toolchain</li>
+  zlib v1.2.12 using the <code>GCC/12.2.0</code> toolchain; if no such easyconfig file is found, it will continue searching
+  using the <code>gompi/2022b</code> toolchain, and finally the <code>foss/2022b</code> toolchain</li>
 <li>if <code>--add-system-to-minimal-toolchains</code> is also enabled, EasyBuild will try locating an easyconfig file for
-  zlib v1.2.8 that uses the <code>system</code> toolchain prior to considering the <code>GCC/4.9.3</code> toolchain</li>
+  zlib v1.2.12 that uses the <code>system</code> toolchain prior to considering the <code>GCC/12.2.0</code> toolchain</li>
 <li>additionally, with <code>--use-existing-modules</code> enabled, EasyBuild will first check whether a <code>zlib</code> module for
-  version 1.2.8 built with the (sub)toolchains being considered exists; if not, it will search for an easyconfig file
-  for zlib as outlined above</li>
+  version 1.2.12 built with the (sub)toolchains being considered exists; if not, it will search for an easyconfig file for zlib as outlined above</li>
 </ul>
 
 
@@ -8589,7 +8588,7 @@ when determining the toolchain to use for dependencies.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2022</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2024</span>
   </span>
 
     
