@@ -1192,6 +1192,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../python-search-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customizing Python search path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../packaging-support/" class="md-nav__link">
         
   
@@ -9406,9 +9429,9 @@ naming scheme).</p>
 <h2 id="partial_installation_stop">Stopping the installation procedure <em>after</em> a step using <code>-s</code>/<code>--stop</code><a class="headerlink" href="#partial_installation_stop" title="Permanent link">&para;</a></h2>
 <p>To stop the installation procedure <em>after</em> a specific step in the installation procedure, the <code>-s</code>/<code>--stop</code>
 command line option can be used; the name of the step must be supplied as an argument.</p>
-<p>The following step names are recognized (listed in execution order): <code>fetch</code>, <code>ready</code>, <code>source</code>, <code>patch</code>,
-<code>prepare</code>, <code>configure</code>, <code>build</code>, <code>test</code>, <code>install</code>, <code>extensions</code>, <code>package</code>, <code>postproc</code>,
-<code>sanitycheck</code>, <code>cleanup</code>, <code>module</code>, <code>testcases</code>.</p>
+<p>The following step names are recognized (listed in execution order): <code>fetch</code>, <code>ready</code>, <code>extract</code>, <code>patch</code>,
+<code>prepare</code>, <code>configure</code>, <code>build</code>, <code>test</code>, <code>install</code>, <code>extensions</code>, <code>postiter</code>, <code>postproc</code>,
+<code>sanitycheck</code>, <code>cleanup</code>, <code>module</code>, <code>permissions</code>, <code>package</code>, <code>testcases</code>.</p>
 <p>Example usage:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$ </span>eb<span class="w"> </span>GCC-11.3.0.eb<span class="w"> </span>--stop<span class="w"> </span>configure
 <span class="go">== temporary log file in case of crash /tmp/eb-X2Z0b7/easybuild-mGxmNb.log</span>
@@ -9688,7 +9711,7 @@ The <code>MigrateFromEBToHMNS</code> module naming scheme is available since Eas
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2023 07:26:53 UTC">June 13, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 9, 2025 10:37:28 UTC">October 9, 2025</span>
   </span>
 
     
